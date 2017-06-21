@@ -49,6 +49,10 @@ Plugin 'snipmate'
 " tcomment
 Plugin 'tComment'
 
+" jsx
+ Plugin 'pangloss/vim-javascript'
+ Plugin 'mxw/vim-jsx'
+
 " elixir
 Plugin 'elixir-lang/vim-elixir'
 
@@ -56,7 +60,7 @@ Plugin 'elixir-lang/vim-elixir'
 let mapleader=","
 
 " Status Line
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
