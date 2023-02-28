@@ -2,74 +2,69 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+call plug#begin()
+
 
 " ZOOMWIN
-Plugin 'vim-scripts/ZoomWin'
+Plug 'vim-scripts/ZoomWin'
 
 " Emmet
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 
 " Git commands
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Commenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " Rspec Highlighting
-Plugin 'Keithbsmiley/rspec.vim'
+Plug 'Keithbsmiley/rspec.vim'
 
 " Badwolf
-Plugin 'sjl/badwolf'
+Plug 'sjl/badwolf'
 
 " NerdTree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " CtrlP
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " Haml
-Plugin 'tpope/vim-haml'
+Plug 'tpope/vim-haml'
 
 " hybrid material
-Plugin 'kristijanhusak/vim-hybrid-material'
+Plug 'kristijanhusak/vim-hybrid-material'
 
 " Coffee Script
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " Endwise
-Plugin 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 
 " Matchit
-Plugin 'Spaceghost/vim-matchit'
-
-" snipmate
-Plugin 'snipmate'
-
-" tcomment
-Plugin 'tComment'
+Plug 'Spaceghost/vim-matchit'
 
 " jsx
- Plugin 'pangloss/vim-javascript'
- Plugin 'mxw/vim-jsx'
+ Plug 'pangloss/vim-javascript'
+ Plug 'mxw/vim-jsx'
 
 " elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
 " Set leader key
 let mapleader=","
 
 " Status Line
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
-call vundle#end()
+call plug#end()
 
 syntax enable
 filetype plugin indent on
 
 set t_Co=256
 set background=dark
-colorscheme hybrid_material 
+colorscheme hybrid_material
 
 au! BufNewFile,BufRead crontab.* set nobackup | set nowritebackup
 
@@ -102,7 +97,7 @@ set showmatch
 set autoindent
 set noeb vb t_vb=
 set list lcs=trail:·,tab:»·
-  
+
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_fugitive_prefix = ''
@@ -121,5 +116,3 @@ if os == 'Darwin' || os == 'Mac'
 elseif os == 'Linux'
   vmap <C-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", ge
 endif
-
-
